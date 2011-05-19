@@ -7,6 +7,7 @@ contents
 --------
 ### jp.skypencil.util.twiter4j
 depends on twitter4j 2.2.2.
+
  *   FollowersIterator
  *   FriendsIterator
  *   ListsIterator
