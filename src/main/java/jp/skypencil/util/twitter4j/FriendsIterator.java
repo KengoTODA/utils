@@ -41,7 +41,7 @@ public final class FriendsIterator implements Iterable<Long> {
 		
 				return idList.length > 0;
 			} catch (TwitterException e) {
-				// TODO “KØ‚È—áŠO‚É–|–ó
+				// TODO translate to proper exception
 				throw new RuntimeException(e);
 			}
 		}

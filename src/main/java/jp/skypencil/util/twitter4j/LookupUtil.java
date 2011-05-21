@@ -15,16 +15,16 @@ public final class LookupUtil {
 
 	/**
 	 * 
-	 * @param methods TwitterƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX
-	 * @param id ’²‚×‚éƒ†[ƒUID‚Ì”z—ñ
-	 * @return ƒŒƒXƒ|ƒ“ƒX‚ÌŒ‹‰Êinull‚ğ‹–‰Âj
+	 * @param methods Twitterã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
+	 * @param id èª¿ã¹ã‚‹ãƒ¦ãƒ¼ã‚¶IDã®é…åˆ—
+	 * @return ãƒ¬ã‚¹ãƒãƒ³ã‚¹ã®çµæœï¼ˆnullã‚’è¨±å¯ï¼‰
 	 * @throws TwitterException
 	 */
-	// TODO Iterator‚Å•Ô‚·‚×‚«‚È‚ñ‚¶‚á‚È‚¢‚Ì
+	// TODO Iterator is better, isn't it?
 	public static ResponseList<User> lookupUser(UserMethods methods, long id[]) throws TwitterException {
 		ResponseList<User> result = null;
 
-		// lookupUsers‚Í100Œ‚Ü‚Å‚µ‚©g‚¦‚È‚¢‚Ì‚Å100Œ‚¸‚Âæ‚Á‚Ä‚­‚é
+		// lookupUsersã¯100ä»¶ã¾ã§ã—ã‹ä½¿ãˆãªã„ã®ã§100ä»¶ãšã¤å–ã£ã¦ãã‚‹
 		for (int startIdx = 0; startIdx < id.length; startIdx += LOOKUP_USER_LIMIT) {
 			int endIdx = Math.min(startIdx + LOOKUP_USER_LIMIT - 1, id.length - 1);
 			long[] users = new long[endIdx - startIdx + 1];

@@ -55,7 +55,7 @@ public final class ListsIterator implements Iterable<UserList> {
 		
 				return lists.size() > 0;
 			} catch (TwitterException e) {
-				// TODO “KØ‚È—áŠO‚É–|–ó
+				// TODO translate to proper exception
 				throw new RuntimeException(e);
 			}
 		}
